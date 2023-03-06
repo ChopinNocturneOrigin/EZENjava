@@ -39,7 +39,7 @@ public class JavaFirst {	// '클래스이름 {' 으로 시작해서    '}' 로 �
 // 여러 단어가 조합된 이름이라면 두번쨰 단어의 시작 문자도 대문자로 표기합니다.(카멜 표기법, Camel case, Pascal case)
 // 단봉 -> 첫문자 소문자, 쌍봉 -> 첫문자 대문자 (Pascal case)
 // JavaFirst, SecondProgram, Java_First
-// 하나의 Java 파일엥는 여러개의 클래스가 정의될 수 있고, 그 중 하나는 반드시 public을 앞에 붙여서
+// 하나의 Java 파일에는 여러개의 클래스가 정의될 수 있고, 그 중 하나는 반드시 public을 앞에 붙여서
 // 현재 파일의 메인 클래스임을 표시합니다.
 // 메인이 되는 클래스에 public static void main(String[] args) {}을 포함시킵니다.
 
