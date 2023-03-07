@@ -30,8 +30,6 @@ public class ControllOpIF10 {
 		sumDays += days;
 		chkWeek = (sumDays - 1) % 7;
 		
-		System.out.println(sumDays);
-		
 		System.out.printf("%d월 %d일은 %s요일 입니다.", month, days, week[chkWeek]);
 		
 		
