@@ -1,4 +1,4 @@
-package days04;
+package days05;
 
 import java.util.Scanner;
 
@@ -23,16 +23,17 @@ public class ControllOpFor12 {
 		small = (num1 < num2) ? num1 : num2;
 		big = (num1 > num2) ? num1 : num2;
 		
+		System.out.println();
 		for (i = 1; i <= small; i++) 
 			if (num1 % i == 0 && num2 % i == 0) System.out.printf("%d ", set = i);
 		System.out.println("\n최대공약수 : " + set);
 		
-		System.out.println("\n최대공약수 : " + eucd(big, small));
+		System.out.println("\n최대공약수 유클리드 호제법 : " + eucd(big, small) );
+		System.out.println("최소공배수 유클리드 호제법 : " + (num1 * num2 / eucd(big, small)) );
 		
 	}
 
 	static int eucd(int a, int b) {
-		if (b == 0) return a;
-		return eucd(b, a % b);
+		return (b == 0) ? a : eucd(b, a % b);
 	}
 }
