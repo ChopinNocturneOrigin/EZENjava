@@ -57,8 +57,14 @@ public class ControllOpLoopEx {
 				}
 			} while (!exitFlag);
 			do {
-				System.out.print("다른 게임을 하시겠습니다?(Yes:1 / No:2) : ");
-				inputYN = sc.nextInt();
+				try {
+					System.out.print("다른 게임을 하시겠습니다?(Yes:1 / No:2) : ");
+					inputYN = sc.nextInt();
+				} catch (Exception e) {
+					System.err.println("1 또는 2의 정수를 입력하세요.");
+					sc.nextLine();
+					inputYN = -1;
+				}
 			} while (inputYN != 1 && inputYN != 2);
 			System.out.println();
 		} while (inputYN == 1);
