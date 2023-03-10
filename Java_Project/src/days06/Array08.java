@@ -31,7 +31,7 @@ public class Array08 {
 					if (a[i] > a[j]) {
 						swapTemp = a[j];
 						a[j] = a[i];
-						a[i] = swapTemp; 
+						a[i] = swapTemp;
 					}
 			System.out.println(Arrays.toString(a));
 		}
