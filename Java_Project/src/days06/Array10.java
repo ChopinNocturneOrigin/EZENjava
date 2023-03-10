@@ -36,6 +36,7 @@ public class Array10 {
 
 		// 컴퓨터 숫자 생성
 		for (int i = 0; i < 3; i++) {
+			comRandomNumber[i] = -1;
 			do {
 				sameFlag = false;
 				randomTemp = (int)(Math.random() * 10);
