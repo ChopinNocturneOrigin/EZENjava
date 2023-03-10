@@ -32,13 +32,13 @@ public class Array10 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Baseball game : guess 3 numbers (1 ~ 9)");
+		System.out.println("Baseball game : guess 3 numbers (0 ~ 9)");
 
 		// 컴퓨터 숫자 생성
 		for (int i = 0; i < 3; i++) {
 			do {
 				sameFlag = false;
-				randomTemp = (int)(Math.random() * 9) + 1;
+				randomTemp = (int)(Math.random() * 10);
 				for (int j : comRandomNumber) 
 					if (j == randomTemp) sameFlag = true;
 			} while (sameFlag);
@@ -61,7 +61,7 @@ public class Array10 {
 						inputFlag = true;
 						do {
 							userGuessTemp = sc.nextInt();
-							if (userGuessTemp > 0 && userGuessTemp < 10) inputFlag = false;
+							if (userGuessTemp >= 0 && userGuessTemp < 10) inputFlag = false;
 							else System.err.println("0 ~ 9의 숫자를 입력하세요.");
 						} while (inputFlag);
 						userGuessNumber[i] = userGuessTemp; 
