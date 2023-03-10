@@ -24,6 +24,17 @@ public class Array10 {
 		// 4. 랜덤 숫자와 유저 숫자 배열의 각 요소들을 서로 비교해서 같은 값이 있는지
 		//    자리는 같은지 다른지 판단해서 S와 B를 예시처럼 출력합니다.
 		// 5. 맞출때까지 (3S 0B) 2 ~ 4까지를 반복 합니다.
+
+		// int num = Integer.parseInt(sc.nextLine());
+		// user[0] = num / 100;
+		// user[1] = (num % 100) / 10;
+		// user[2] = num % 10;
+		
+		// String num = sc.nextLine();
+		// user[0] = num.charAt(0) - '0';
+		// user[1] = num.charAt(1) - '0';
+		// user[2] = num.charAt(2) - '0';
+
 		
 		boolean endFlag = false, sameFlag, errFlag, inputFlag;
 		int randomTemp, userGuessTemp, countStrike, countBall, count = 0;
