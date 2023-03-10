@@ -27,7 +27,7 @@ public class Array10 {
 		
 		boolean endFlag = false, sameFlag, errFlag, inputFlag;
 		int randomTemp, userGuessTemp, countStrike, countBall, count = 0;
-		int[] comRandomNumber = new int[3]; // 컴퓨터가 기억할 숫자를 저장할 배열
+		int[] comRandomNumber = {-1, -1, -1}; // 컴퓨터가 기억할 숫자를 저장할 배열
 		int[] userGuessNumber = new int[3]; // 사용자가 입력한 숫자를 저장할 배열
 		
 		Scanner sc = new Scanner(System.in);
@@ -36,7 +36,6 @@ public class Array10 {
 
 		// 컴퓨터 숫자 생성
 		for (int i = 0; i < 3; i++) {
-			comRandomNumber[i] = -1;
 			do {
 				sameFlag = false;
 				randomTemp = (int)(Math.random() * 10);
