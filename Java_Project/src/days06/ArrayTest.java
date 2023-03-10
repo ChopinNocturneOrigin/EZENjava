@@ -1,5 +1,7 @@
 package days06;
 
+import java.util.Arrays;
+
 public class ArrayTest {
 
 	public static void main(String[] args) {
@@ -7,11 +9,11 @@ public class ArrayTest {
 	            "Affogato", "Americano", "Cappuccino", "Corretto", "Cortado",   
 	            "Doppio", "Espresso", "Frappucino", "Freddo", "Lungo", "Macchiato",      
 	            "Marocchino", "Ristretto" };
-		String[] copyTo = java.util.Arrays.copyOfRange(copyFrom, 2, 9); 
+		String[] copyTo = Arrays.copyOfRange(copyFrom, 2, 9); 
 		
-		java.util.Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print);
+		Arrays.stream(copyTo).map(coffee -> coffee + " ").forEach(System.out::print);
 		System.out.println("\n\n");
-		System.out.println(java.util.Arrays.toString(copyTo)); 
+		System.out.println(Arrays.toString(copyTo)); 
 		
 		
 	}

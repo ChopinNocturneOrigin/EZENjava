@@ -25,8 +25,8 @@ public class Array10 {
 		//    자리는 같은지 다른지 판단해서 S와 B를 예시처럼 출력합니다.
 		// 5. 맞출때까지 (3S 0B) 2 ~ 4까지를 반복 합니다.
 		
-		boolean endFlag = false, sameFlag, errFlag;
-		int randomTemp, countStrike, countBall, count = 0;
+		boolean endFlag = false, sameFlag, errFlag, inputFlag;
+		int randomTemp, userGuessTemp, countStrike, countBall, count = 0;
 		int[] comRandomNumber = new int[3]; // 컴퓨터가 기억할 숫자를 저장할 배열
 		int[] userGuessNumber = new int[3]; // 사용자가 입력한 숫자를 저장할 배열
 		
@@ -36,10 +36,11 @@ public class Array10 {
 
 		// 컴퓨터 숫자 생성
 		for (int i = 0; i < 3; i++) {
-			sameFlag = false;
 			do {
+				sameFlag = false;
 				randomTemp = (int)(Math.random() * 9) + 1;
-				for (int j : comRandomNumber) if (j == randomTemp) sameFlag = true;
+				for (int j : comRandomNumber) 
+					if (j == randomTemp) sameFlag = true;
 			} while (sameFlag);
 			comRandomNumber[i] = randomTemp;
 		}
@@ -56,7 +57,15 @@ public class Array10 {
 				System.out.printf("-= %d회차 =-\n", count);
 				System.out.print("숫자를 입력하세요 (예: 1 2 3) : ");
 				try {
-					for (int i = 0; i < 3; i++) userGuessNumber[i] = sc.nextInt();
+					for (int i = 0; i < 3; i++) {
+						inputFlag = true;
+						do {
+							userGuessTemp = sc.nextInt();
+							if (userGuessTemp > 0 && userGuessTemp < 10) inputFlag = false;
+							else System.err.println("0 ~ 9의 숫자를 입력하세요.");
+						} while (inputFlag);
+						userGuessNumber[i] = userGuessTemp; 
+					}
 				} catch (Exception e) {
 					errFlag = true;
 					sc.nextLine();
